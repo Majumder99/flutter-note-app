@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "910912439617",
+    "project_id": "flutternoteapp-2beed",
+    "storage_bucket": "flutternoteapp-2beed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910912439617:android:96c19abc97ba0432b58dc0",
+        "android_client_info": {
+          "package_name": "com.example.flutter_todo_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910912439617-2hupftjvqcli9alq2mhsdt80emauvc89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3jXGxY1ddVewh2Rif_K-zGHlnbagudKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910912439617-2hupftjvqcli9alq2mhsdt80emauvc89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
