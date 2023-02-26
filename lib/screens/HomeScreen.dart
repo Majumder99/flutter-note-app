@@ -1,6 +1,8 @@
 // ignore_for_file: file_names
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_todo_app/screens/note_editor.dart';
+import 'package:flutter_todo_app/screens/note_reader.dart';
 import "package:flutter_todo_app/style/app_styles.dart";
 import 'package:flutter_todo_app/widgets/note_card.dart';
 
@@ -51,7 +53,15 @@ class _HomeScreenState extends State<HomeScreen> {
                             const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2),
                         children: snapshot.data!.docs
-                            .map((note) => noteCard(() => null, note))
+                            .map((note) => noteCard(
+                                () => {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  NoteReaderScreen(note)))
+                                    },
+                                note))
                             .toList());
                   }
                   return Text("There is no notes", style: AppStyle.mainContent);
@@ -61,6 +71,13 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton.extended(
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => NoteEditorScreen()));
+          },
+          label: Text("Add note"),
+          icon: Icon(Icons.add)),
     );
   }
 }
